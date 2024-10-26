@@ -3,7 +3,15 @@
 int main()
 {
 
-    int w = 4, x = 4, y = 4, z = 4;
+    int w, x, y, z;
+    printf("Enter the size of the first dimension\n");
+    scanf("%d", &w);
+    printf("Enter the size of the second dimension\n");
+    scanf("%d", &x);
+    printf("Enter the size of the third dimension\n");
+    scanf("%d", &y);
+    printf("Enter the size of the fourth dimension\n");
+    scanf("%d", &z);
     int ****arr = (int ****)malloc(w * sizeof(int ***));
     for (int i = 0; i < w; i++)
     {
