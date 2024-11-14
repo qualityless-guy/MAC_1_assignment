@@ -5,7 +5,6 @@ int main()
     int n;
     int *arr;
     int index;
-    int sec_max;
     printf("ENter the size of the array\n");
     scanf("%d", &n);
     arr = (int *)malloc(n * sizeof(int));
@@ -17,17 +16,19 @@ int main()
         printf("%d\t ", arr[i]);
 
     printf("\n");
+
+    int max = arr[0];
     for (int i = 1; i < n; i++)
     {
-        if (arr[i] >= arr[i - 1])
+        if (max < arr[i])
         {
-            index = i;
+            max = arr[i];
         }
     }
-
-    for (int i = 0; i < n; i++)
+    int sec_max = -1;
+    for (int i = 1; i < n; i++)
     {
-        if (arr[i] >= arr[i - 1] && i != index)
+        if (arr[i] > sec_max && arr[i] != max)
         {
             sec_max = arr[i];
         }
